@@ -10,19 +10,19 @@ def get_valid_ticket_request(remaining):
             s = int(input("Hello! How Many Tickets Would You Like To Purchase?\n", ))
 
             if s > 4:
-                print("You may only purchase up to 4 tickets, please select a new amount.")
+                print("You may only purchase up to 4 tickets, please select a new amount.\n")
 
             elif s > remaining:
-                print(f"Sorry, we only have {remaining} tickets remaining, please select a new amount.")
+                print(f"Sorry, we only have {remaining} tickets remaining, please select a new amount.\n")
 
             elif s <= 0:
-                print("Please enter a positive number.")
+                print("Please enter a positive number.\n")
 
             else:
                return s
 
         except ValueError:
-            print("Invalid input. Please enter a valid number.")
+            print("Invalid input. Please enter a valid number.\n")
 
 # defining our main function and it's variables/values
 def main():
@@ -38,7 +38,7 @@ def main():
 
         print(f"There are now {tickets_remaining} tickets remaining.\n")
 
-    print(f"Tickets Sold Out. There were {customers} today")
+    print(f"Tickets Sold Out. There were {customers} today\n")
 
 # establishing our program
 if __name__ == "__main__":
