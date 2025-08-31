@@ -1,4 +1,5 @@
-#This code keeps current ticket and buyer count, selling people up to 4 tickets at a time, and only sells up to 20 tickets total
+#This code sells up to 20 cinema tickets, allowing each customer to purchase up to 4 tickets at once.
+# It validates the users input, records # of remaining tickets as-well as customers, and stops once there are no remaining tickets.
 
 MAX_TICKETS = 20 #contstant
 
@@ -6,7 +7,7 @@ MAX_TICKETS = 20 #contstant
 def get_valid_ticket_request(remaining):
     while True:
         try:
-            s = int(input("Hello, How Many Tickets Would You Like To Purchase?\n", ))
+            s = int(input("Hello! How Many Tickets Would You Like To Purchase?\n", ))
             if s > 4:
                 print("You may only purchase up to 4 tickets, please select a new amount.")
             elif s > remaining:
@@ -20,15 +21,15 @@ def get_valid_ticket_request(remaining):
 # defining our main function and it's variables/values
 def main():
     tickets_remaining = MAX_TICKETS
-    buyers = 0
+    customers = 0
 
     while tickets_remaining > 0:
         requested = get_valid_ticket_request(tickets_remaining)
         tickets_remaining -= requested
-        buyers += 1
+        customers += 1
         print(f"There are now {tickets_remaining} tickets remaining.\n")
 
-    print(f"Tickets Sold Out. There were {buyers} today")
+    print(f"Tickets Sold Out. There were {customers} today")
 
 # establishing our program
 if __name__ == "__main__":
