@@ -7,7 +7,7 @@ MAX_TICKETS = 10 #contstant
 def get_valid_ticket_request(remaining):
     while True:
         try:
-            s = int(input("Hello! How Many Tickets Would You Like To Purchase?\n", ))
+            s = int(input("How Many Tickets Would You Like To Purchase?\n", ))
 
             if s > 4:
                 print("You may only purchase up to 4 tickets, please select a new amount.\n")
