@@ -1,7 +1,7 @@
 #This code sells up to 20 cinema tickets, allowing each customer to purchase up to 4 tickets at once.
 # It validates the users input, records # of remaining tickets as-well as customers, and stops once there are no remaining tickets.
 
-MAX_TICKETS = 20 #contstant
+MAX_TICKETS = 10 #contstant
 
 # defining a function that will prompt the user till they give a valid input
 def get_valid_ticket_request(remaining):
