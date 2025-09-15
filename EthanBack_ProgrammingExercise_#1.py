@@ -27,18 +27,18 @@ def get_valid_ticket_request(remaining):
 # defining our main function and it's variables/values
 def main():
     tickets_remaining = MAX_TICKETS
-    buyers = 0
+    Buyers = 0
 
     while tickets_remaining > 0:
         requested = get_valid_ticket_request(tickets_remaining)
 
         tickets_remaining -= requested
 
-        buyers += 1
+        Buyers += 1
 
         print(f"There are now {tickets_remaining} tickets remaining.\n")
 
-    print(f"Tickets Sold Out. There were {buyers} today\n")
+    print(f"Tickets Sold Out. There were {Buyers} today\n")
 
 # establishing our program
 if __name__ == "__main__":
